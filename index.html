@@ -35,9 +35,8 @@
   <header id="home" class="hero text-center">
     <div class="container">
       <picture>
-        <!-- WebP preferred -->
-        <source srcset="images/hero.webp" type="image/webp">
-        <img src="images/hero.jpg" alt="NCA Nacharam campus entrance" class="img-fluid rounded-3 hero-image" loading="lazy" />
+        <!-- Using the repository image file (spaces URL-encoded) -->
+        <img src="images/WhatsApp%20Image%202025-11-26%20at%207.22.39%20PM.jpg" alt="NCA Nacharam campus entrance" class="img-fluid rounded-3 hero-image" loading="lazy" />
       </picture>
 
       <h1 class="display-5 mt-3">Welcome to NCA Nacharam</h1>
@@ -58,38 +57,36 @@
       <div class="row g-3">
         <div class="col-sm-6 col-md-4">
           <figure class="figure card">
-            <img src="/workspaces/NCA_Nacharam/images/WhatsApp Image 2025-11-26 at 7.22.39 PM.jpg" class="figure-img img-fluid rounded" alt="Students in classroom" loading="lazy">
+            <img src="images/WhatsApp%20Image%202025-11-26%20at%207.23.04%20PM.jpg" class="figure-img img-fluid rounded" alt="Students in classroom" loading="lazy">
             <figcaption class="figure-caption">Students in classroom</figcaption>
           </figure>
         </div>
 
         <div class="col-sm-6 col-md-4">
           <figure class="figure card">
-            <img src="/workspaces/NCA_Nacharam/images/WhatsApp Image 2025-11-26 at 7.23.04 PM.jpg" class="figure-img img-fluid rounded" alt="Outdoor campus view" loading="lazy">
+            <img src="images/WhatsApp%20Image%202025-11-26%20at%207.28.13%20PM.jpg" class="figure-img img-fluid rounded" alt="Outdoor campus view" loading="lazy">
             <figcaption class="figure-caption">Outdoor campus view</figcaption>
           </figure>
         </div>
 
         <div class="col-sm-6 col-md-4">
           <figure class="figure card">
-            <img src="/workspaces/NCA_Nacharam/images/WhatsApp Image 2025-11-26 at 7.28.13 PM.jpg" class="figure-img img-fluid rounded" alt="Faculty portrait" loading="lazy">
-            <figcaption class="figure-caption">Faculty portrait</figcaption>
+            <!-- Re-using the hero image as a third thumbnail; replace if you add more images -->
+            <img src="images/WhatsApp%20Image%202025-11-26%20at%207.22.39%20PM.jpg" class="figure-img img-fluid rounded" alt="Campus scene" loading="lazy">
+            <figcaption class="figure-caption">Campus scene</figcaption>
           </figure>
         </div>
       </div>
 
-      <!-- Video block (local video files) -->
+      <!-- Video block (local video file from repo) -->
       <div class="mt-4">
         <h3>Featured video</h3>
-        <video class="w-100 video-player" controls playsinline poster="images/video-poster.jpg">
-          <!-- Prefer webm then mp4; adjust filenames to match your files -->
-          <source src="images/feature-video.webm" type="video/webm">
-          <source src="/workspaces/NCA_Nacharam/images/WhatsApp Video 2025-11-26 at 7.27.23 PM.mp4" type="video/mp4">
-          <!-- Fallback image / link -->
+        <video class="w-100 video-player" controls playsinline poster="images/WhatsApp%20Image%202025-11-26%20at%207.22.39%20PM.jpg">
+          <source src="images/WhatsApp%20Video%202025-11-26%20at%207.27.23%20PM.mp4" type="video/mp4">
           Your browser does not support the video tag. You can download the video here:
-          <a href="images/feature-video.mp4">Download video</a>.
+          <a href="images/WhatsApp%20Video%202025-11-26%20at%207.27.23%20PM.mp4">Download video</a>.
         </video>
-        <p class="text-muted small mt-2">Tip: include both webm and mp4 formats for broad browser support and a poster image for preview.</p>
+        <p class="text-muted small mt-2">Tip: if you later add a WebM version, include it as an additional source for broader support.</p>
       </div>
     </section>
 
