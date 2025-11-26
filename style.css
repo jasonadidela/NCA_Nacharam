@@ -1,80 +1,49 @@
-/* Basic layout and theme for NCA Nacharam sample site */
+/* Additional styles for gallery and media */
 
+.hero-image {
+  max-height: 360px;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Cards used around figure to give small elevation */
+.card {
+  padding: 0.5rem;
+  border: 1px solid rgba(0,0,0,0.04);
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* Video player */
+.video-player {
+  display: block;
+  border-radius: 8px;
+  background: #000;
+  max-height: 540px;
+  object-fit: cover;
+}
+
+/* Figure caption */
+.figure-caption {
+  padding-top: 0.5rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .hero-image { max-height: 220px; }
+}
+
+/* Keep the rest of the site styles (you can merge with previous style.css) */
 :root{
   --brand: #0d6efd;
   --muted: #6c757d;
-  --bg-hero-start: rgba(13,110,253,0.13);
-  --bg-hero-end: rgba(111,66,193,0.08);
-  --card-border: rgba(0,0,0,0.04);
-  --max-width: 1100px;
-  --radius: 8px;
-  --content-padding: 1.25rem;
 }
-
-* { box-sizing: border-box; }
-html,body { height:100%; }
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   line-height: 1.6;
   color: #212529;
   background: #fff;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
 }
-
-/* Navbar spacing when fixed */
-body { padding-top: 56px; }
-
-/* Hero */
-.hero {
-  background: linear-gradient(135deg, var(--bg-hero-start), var(--bg-hero-end));
-  padding: 60px 0;
-  margin-bottom: 1.5rem;
-}
-
-/* Container width helper */
-.container {
-  max-width: var(--max-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* Cards */
-.card {
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-}
-
-/* Section headings */
-h2 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  color: #0b5ed7;
-}
-
-/* Forms */
-.form-label { font-weight: 600; color: var(--muted); }
-input.form-control, textarea.form-control {
-  border-radius: 6px;
-  border: 1px solid #dfe3e8;
-  padding: 0.6rem 0.75rem;
-}
-
-/* Footer */
-footer { border-top: 1px solid #f1f3f5; }
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .hero { padding: 36px 0; text-align: left; }
-  .container { padding-left: .75rem; padding-right: .75rem; }
-}
-
-/* Utility classes */
-.text-muted { color: var(--muted) !important; }
-.mb-5 { margin-bottom: 3rem !important; }
-.my-5 { margin-top: 3rem !important; margin-bottom: 3rem !important; }
-
-/* Small accessibility focus styles */
-a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(13,110,253,0.18); outline-offset: 2px; }

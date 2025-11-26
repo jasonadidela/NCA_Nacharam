@@ -1,15 +1,11 @@
-// script.js - small client behaviors for the NCA Nacharam sample site
+// script.js - behaviors including light enhancements for image/video elements
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Set current year in footer
+  // Fill footer year
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Hook contact form submit if present
-  const form = document.getElementById('contactForm');
-  if (form) form.addEventListener('submit', handleContactSubmit);
-
-  // Smooth scroll for in-page links (progressive enhancement)
+  // Smooth scroll for in-page links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
       const href = a.getAttribute('href');
@@ -18,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (target) {
           e.preventDefault();
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          // close responsive nav if open (Bootstrap 5 uses .navbar-collapse)
+          // close responsive nav if open (Bootstrap)
           const navCollapse = document.querySelector('.navbar-collapse.show');
           if (navCollapse) {
             const bsCollapse = bootstrap.Collapse.getInstance(navCollapse) || new bootstrap.Collapse(navCollapse);
@@ -28,27 +24,62 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Add click-to-open for image figures (optional lightbox behaviour)
+  document.querySelectorAll('.figure img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => openLightbox(img));
+  });
 });
 
-// Simple contact form handler (replace with real API call)
-function handleContactSubmit(event) {
-  event.preventDefault();
-  const form = event.currentTarget;
+// Very small lightbox (no external libs). Click the overlay or image to close.
+function openLightbox(img) {
+  const src = img.currentSrc || img.src;
+  const alt = img.alt || '';
+  const overlay = document.createElement('div');
+  overlay.style.position = 'fixed';
+  overlay.style.inset = 0;
+  overlay.style.background = 'rgba(0,0,0,0.8)';
+  overlay.style.display = 'flex';
+  overlay.style.alignItems = 'center';
+  overlay.style.justifyContent = 'center';
+  overlay.style.zIndex = 1050;
+  overlay.tabIndex = 0;
+
+  const large = document.createElement('img');
+  large.src = src;
+  large.alt = alt;
+  large.style.maxWidth = '95%';
+  large.style.maxHeight = '95%';
+  large.style.boxShadow = '0 10px 30px rgba(0,0,0,0.6)';
+  large.style.borderRadius = '8px';
+  large.loading = 'eager';
+
+  overlay.appendChild(large);
+  document.body.appendChild(overlay);
+
+  function remove() {
+    overlay.remove();
+    document.removeEventListener('keydown', onKey);
+  }
+  function onKey(e) {
+    if (e.key === 'Escape') remove();
+  }
+  overlay.addEventListener('click', remove);
+  document.addEventListener('keydown', onKey);
+}
+
+/* Contact form placeholder (keeps previous behaviour) */
+function submitForm(e) {
+  e.preventDefault();
+  const form = e.currentTarget || document.getElementById('contactForm');
   const resultEl = document.getElementById('formResult');
 
-  // Basic client-side validation (HTML required attributes should suffice)
-  const formData = new FormData(form);
-  const name = formData.get('name') || '';
-  const email = formData.get('email') || '';
-  const message = formData.get('message') || '';
-
-  // Simulate a submission delay and show result
   if (resultEl) {
     resultEl.style.display = 'inline';
     resultEl.textContent = 'Sending...';
   }
 
-  // Simulated async submission
   setTimeout(() => {
     if (resultEl) {
       resultEl.textContent = 'Thanks — message sent!';
