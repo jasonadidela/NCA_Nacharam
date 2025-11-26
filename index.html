@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NCA Nacharam — Sample Home</title>
+
+  <!-- Basic styles (you can replace with your own CSS or framework) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body { padding-top: 56px; }
+    .hero {
+      background: linear-gradient(135deg, #0d6efd22, #6f42c122);
+      padding: 60px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">NCA Nacharam</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+        aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero text-center">
+    <div class="container">
+      <h1 class="display-5">Welcome to NCA Nacharam</h1>
+      <p class="lead text-muted">A simple starter template you can adapt for your project.</p>
+      <p>
+        <a href="#about" class="btn btn-primary btn-lg">Learn more</a>
+        <a href="#contact" class="btn btn-outline-secondary btn-lg">Contact us</a>
+      </p>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container my-5">
+    <section id="about" class="mb-5">
+      <h2>About</h2>
+      <p>This is a minimal example index.html to serve as a starting point. Replace this text with your project's content,
+         assets, and custom styles or scripts.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Mission</h3>
+          <p>Provide a clear, responsive layout and accessible structure so contributors can quickly iterate.</p>
+        </div>
+        <div class="col-md-6">
+          <h3>Tech</h3>
+          <ul>
+            <li>HTML5</li>
+            <li>Bootstrap 5 (CDN)</li>
+            <li>Optional: local CSS/JS for customization</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="mb-5">
+      <h2>Features</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Responsive</h5>
+              <p class="card-text">Mobile-first layout using Bootstrap.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Accessible</h5>
+              <p class="card-text">Semantic HTML and ARIA-friendly components.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Extendable</h5>
+              <p class="card-text">Easy to add your own scripts and styles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mb-5">
+      <h2>Contact</h2>
+      <form id="contactForm" class="row g-3" onsubmit="submitForm(event)">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Name</label>
+          <input id="name" name="name" class="form-control" required />
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" name="email" type="email" class="form-control" required />
+        </div>
+        <div class="col-12">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Send</button>
+          <span id="formResult" class="ms-3 text-success" style="display:none">Thanks — message sent!</span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-light py-4">
+    <div class="container text-center">
+      <small class="text-muted">&copy; <span id="year"></span> NCA Nacharam. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Small client-side behaviors
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function submitForm(e) {
+      e.preventDefault();
+      // Placeholder: replace with real submission (fetch/XHR) to your API or service
+      const result = document.getElementById('formResult');
+      result.style.display = 'inline';
+      setTimeout(() => result.style.display = 'none', 3000);
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
