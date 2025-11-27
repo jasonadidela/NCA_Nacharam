@@ -1,4 +1,7 @@
-// script.js — small client behaviors for the NCA site
+// script.js — small client behaviors for the NCA site (keeps previous features)
+// - smooth scroll for internal links
+// - contact form placeholder
+// - preserves mobile click dropdown behavior (desktop hover is via CSS)
 
 document.addEventListener('DOMContentLoaded', () => {
   // Footer year
@@ -14,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (target) {
           e.preventDefault();
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // close responsive nav if open (Bootstrap)
           const navCollapse = document.querySelector('.navbar-collapse.show');
           if (navCollapse) {
             const bsCollapse = bootstrap.Collapse.getInstance(navCollapse) || new bootstrap.Collapse(navCollapse);
@@ -24,9 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Contact form placeholder (replace with real backend)
+  // Contact form placeholder
   const form = document.getElementById('contactForm');
   if (form) form.addEventListener('submit', submitForm);
+
+  // Ensure dropdowns on touch devices still open on tap (no extra JS needed for Bootstrap)
+  // Desktop hover-to-open is handled by CSS in style.css inside @media (min-width: 992px)
 });
 
 function submitForm(e) {

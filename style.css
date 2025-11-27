@@ -1,4 +1,4 @@
-/* style.css — lightweight styling for the NCA page */
+/* style.css — lightweight styling for the NCA page (updated for meetings dropdown hover) */
 
 :root {
   --primary: #0d6efd;
@@ -53,3 +53,17 @@ h2 { color: var(--primary); margin-bottom: 0.5rem; }
 
 /* Accessibility focus */
 a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(13,110,253,0.18); outline-offset: 2px; }
+
+/* Dropdown: show menu on hover for desktop (keeps click behavior on touch devices) */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+  .navbar .dropdown > .dropdown-toggle::after {
+    transition: transform .15s ease;
+  }
+  .navbar .dropdown:hover > .dropdown-toggle::after {
+    transform: rotate(180deg);
+  }
+}

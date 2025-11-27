@@ -19,12 +19,27 @@
 
       <div class="collapse navbar-collapse" id="navMain">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#meeting">1st Meeting</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+
+          <!-- Meetings dropdown: hover-enabled on desktop, clickable on mobile -->
+          <li class="nav-item dropdown">
+            <a id="meetingsDropdown" class="nav-link dropdown-toggle" href="meetings/index.html"
+               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Meetings
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="meetingsDropdown">
+              <li><a class="dropdown-item" href="meetings/meeting-1.html">1st Meeting — Mar 2, 2024</a></li>
+              <!-- Add more meeting links here as meetings/meeting-2.html, meeting-3.html, ... -->
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="meetings/index.html">All Meetings</a></li>
+            </ul>
+          </li>
+
           <li class="nav-item"><a class="nav-link" href="#highlights">Highlights</a></li>
           <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -36,11 +51,12 @@
            alt="NCA — community gathering" class="hero-img rounded" loading="lazy">
       <h1 class="mt-3">Nagaram Christian Association (NCA)</h1>
       <p class="lead">“Endeavouring to keep the unity of the Spirit in the bond of peace.” – Ephesians 4:3</p>
-      <a class="btn btn-light btn-lg" href="#meeting">Read about the 1st meeting</a>
+      <a class="btn btn-light btn-lg" href="meetings/meeting-1.html">Read about the 1st meeting</a>
     </div>
   </header>
 
   <main class="container my-5">
+    <!-- existing content -->
     <section id="meeting" class="mb-5">
       <h2>1st Meeting – Nagaram Christian Association</h2>
       <p class="muted">Saturday, March 2nd, 2024</p>
@@ -59,158 +75,7 @@
       </div>
     </section>
 
-    <section id="highlights" class="mb-5">
-      <h2>Key Discussion Points</h2>
-
-      <div class="row">
-        <div class="col-md-4">
-          <h4>Strengthening Community & Faith</h4>
-          <p><strong>One Faith, One Family:</strong> Encouraging Christian unity in Nagaram. <br>
-             <strong>Power of Prayer:</strong> Building spiritual strength together.<br>
-             <strong>Gospel Outreach:</strong> Sharing faith across Nagaram Municipality.</p>
-        </div>
-
-        <div class="col-md-4">
-          <h4>Safety & Support for Families</h4>
-          <p>Ensuring safety for all Christian families. Establishing a registered body for the Christian community and creating a Welfare Helping Hand to assist families in need.</p>
-        </div>
-
-        <div class="col-md-4">
-          <h4>Community Services & Development</h4>
-          <p>Tackling cemetery-related challenges, preserving sacred spaces, promoting youth involvement, and planning future meetings and activities.</p>
-        </div>
-      </div>
-
-      <blockquote class="blockquote mt-3">
-        “Fulfil ye my joy, that ye be likeminded, having the same love, being of one accord, of one mind.” — Philippians 2:2
-      </blockquote>
-    </section>
-
-    <section id="activities" class="mb-5">
-      <h2>Key Activities</h2>
-      <div class="row g-3">
-        <div class="col-md-6">
-          <div class="card p-3">
-            <h5>Education Programs</h5>
-            <ul>
-              <li>Supporting children's learning</li>
-              <li>Providing resources for rural education</li>
-            </ul>
-            <h5 class="mt-3">Healthcare Initiatives</h5>
-            <ul>
-              <li>Health camps</li>
-              <li>Medical help for needy families</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card p-3">
-            <h5>Environmental Conservation</h5>
-            <ul>
-              <li>Plantation drives</li>
-              <li>Community clean-up programs</li>
-            </ul>
-            <h5 class="mt-3">Community Development</h5>
-            <ul>
-              <li>Skill development</li>
-              <li>Household support programs</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="support" class="mb-5">
-      <h2>Support NCA NGO Activities</h2>
-      <p><strong>A Call to Action for All NCA Members</strong></p>
-      <p>NCA is committed to serving and uplifting the community through impactful programs that promote education, health, environment care, and social well-being.</p>
-
-      <h5>Sponsorship Tiers</h5>
-      <ul class="tiers">
-        <li><strong>₹100 – Basic Support</strong> — Helps fund foundational activities and community needs.</li>
-        <li><strong>₹500 – Silver Tier</strong> — Strengthens community outreach and program development.</li>
-        <li><strong>₹1000+ – Gold / Donor Tier</strong> — Supports long-term initiatives and protective services for the community.</li>
-      </ul>
-
-      <div class="mt-3">
-        <a class="btn btn-primary" href="#contact">Become a Supporter</a>
-      </div>
-    </section>
-
-    <section id="about" class="mb-5">
-      <h2>About Nagaram Christian Association (NCA)</h2>
-      <div class="card p-3">
-        <p>The Nagaram Christian Association is a community-focused, faith-centered organization dedicated to fostering unity, support, and spiritual growth among believers in Nagaram. Rooted in Christian values, NCA works to ensure that every family is heard, supported, and uplifted through fellowship, prayer, and meaningful action.</p>
-
-        <h5>Our Vision</h5>
-        <p>To build a united Christian community where every member thrives in faith, safety, and dignity while contributing positively to society.</p>
-
-        <h5>Our Mission</h5>
-        <ul>
-          <li>Strengthen Christian unity</li>
-          <li>Support families in need</li>
-          <li>Provide welfare services</li>
-          <li>Expand gospel outreach</li>
-          <li>Empower youth & community leadership</li>
-          <li>Preserve sacred and community spaces</li>
-          <li>Promote education, healthcare, and environmental care</li>
-        </ul>
-
-        <h5>Why NCA Exists</h5>
-        <p>We believe in standing together as one family in Christ, ensuring no believer in Nagaram faces challenges alone. Through coordinated support, prayer, and organized action, NCA serves as a platform for community empowerment and spiritual fellowship.</p>
-      </div>
-    </section>
-
-    <section id="media" class="mb-5">
-      <h2>Gallery & Featured Video</h2>
-      <div class="row g-3">
-        <div class="col-md-4">
-          <img src="images/WhatsApp%20Image%202025-11-26%20at%207.23.04%20PM.jpg" alt="Gallery image" class="img-fluid rounded" loading="lazy">
-        </div>
-        <div class="col-md-4">
-          <img src="images/WhatsApp%20Image%202025-11-26%20at%207.28.13%20PM.jpg" alt="Gallery image" class="img-fluid rounded" loading="lazy">
-        </div>
-        <div class="col-md-4">
-          <img src="images/WhatsApp%20Image%202025-11-26%20at%207.22.39%20PM.jpg" alt="Gallery image" class="img-fluid rounded" loading="lazy">
-        </div>
-      </div>
-
-      <div class="mt-4">
-        <h5>NCA Pre-Christmas 2024</h5>
-        <video controls playsinline class="w-100 rounded video-player"
-               poster="images/WhatsApp%20Image%202025-11-26%20at%207.22.39%20PM.jpg">
-          <source src="images/WhatsApp%20Video%202025-11-26%20at%207.27.23%20PM.mp4" type="video/mp4">
-          Your browser does not support the video tag. <a href="images/WhatsApp%20Video%202025-11-26%20at%207.27.23%20PM.mp4">Download video</a>.
-        </video>
-      </div>
-    </section>
-
-    <section id="contact" class="mb-5">
-      <h2>Contact & Involvement</h2>
-      <p>If you would like to join, support, or volunteer with NCA, please reach out via email or use the contact form below.</p>
-
-      <p><strong>Email:</strong> <a href="mailto:ncanagaram@gmail.com">ncanagaram@gmail.com</a></p>
-
-      <form id="contactForm" class="row g-3" onsubmit="submitForm(event)">
-        <div class="col-md-6">
-          <label for="name" class="form-label">Name</label>
-          <input id="name" name="name" class="form-control" required />
-        </div>
-        <div class="col-md-6">
-          <label for="email" class="form-label">Email</label>
-          <input id="email" name="email" type="email" class="form-control" required />
-        </div>
-        <div class="col-12">
-          <label for="message" class="form-label">Message</label>
-          <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Send</button>
-          <span id="formResult" class="ms-3 text-success" style="display:none">Thanks — message sent!</span>
-        </div>
-      </form>
-    </section>
+    <!-- other sections omitted for brevity in this snippet (keep your existing content) -->
   </main>
 
   <footer class="bg-light py-4">
