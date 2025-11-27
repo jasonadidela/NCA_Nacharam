@@ -1,4 +1,4 @@
-/* style.css — lightweight styling for the NCA page (updated for meetings dropdown hover) */
+/* style.css — updated logo and hero styles */
 
 :root {
   --primary: #0d6efd;
@@ -17,10 +17,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Navbar logo */
+.nca-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+  margin-right: 0.5rem;
+}
+
 /* Hero */
 .hero {
-  background: linear-gradient(180deg, rgba(13,110,253,0.06), transparent);
-  padding: 48px 0;
+  background: linear-gradient(180deg, rgba(13,110,253,0.04), transparent);
+  padding: 36px 0;
   text-align: center;
 }
 .hero-img {
@@ -30,6 +38,13 @@ body {
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+/* Hero content box */
+.hero-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(16,24,40,0.04);
 }
 
 /* Cards and sections */
@@ -47,23 +62,10 @@ h2 { color: var(--primary); margin-bottom: 0.5rem; }
 
 /* Responsive */
 @media (max-width: 768px) {
+  .nca-logo { height: 36px; }
   .hero-img { max-height: 220px; }
   .container { padding: 0 0.75rem; }
 }
 
 /* Accessibility focus */
 a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(13,110,253,0.18); outline-offset: 2px; }
-
-/* Dropdown: show menu on hover for desktop (keeps click behavior on touch devices) */
-@media (min-width: 992px) {
-  .navbar .dropdown:hover > .dropdown-menu {
-    display: block;
-    margin-top: 0;
-  }
-  .navbar .dropdown > .dropdown-toggle::after {
-    transition: transform .15s ease;
-  }
-  .navbar .dropdown:hover > .dropdown-toggle::after {
-    transform: rotate(180deg);
-  }
-}

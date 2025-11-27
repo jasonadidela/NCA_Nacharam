@@ -11,7 +11,14 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Nagaram Christian Association (NCA)</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <picture>
+          <source srcset="images/NCA_Logo.svg" type="image/svg+xml">
+          <source srcset="images/NCA_Logo.png" type="image/png">
+          <img src="images/NCA_Logo.jpg" alt="NCA Logo" class="nca-logo" loading="eager">
+        </picture>
+        <span class="ms-2 d-none d-lg-inline">Nagaram Christian Association (NCA)</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
         aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -21,7 +28,7 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
 
-          <!-- Meetings dropdown: hover-enabled on desktop, clickable on mobile -->
+          <!-- Meetings dropdown -->
           <li class="nav-item dropdown">
             <a id="meetingsDropdown" class="nav-link dropdown-toggle" href="meetings/index.html"
                role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -29,13 +36,11 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="meetingsDropdown">
               <li><a class="dropdown-item" href="meetings/meeting-1.html">1st Meeting — Mar 2, 2024</a></li>
-              <!-- Add more meeting links here as meetings/meeting-2.html, meeting-3.html, ... -->
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="meetings/index.html">All Meetings</a></li>
             </ul>
           </li>
 
-          <li class="nav-item"><a class="nav-link" href="#highlights">Highlights</a></li>
           <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
@@ -47,35 +52,100 @@
 
   <header id="home" class="hero text-center">
     <div class="container">
-      <img src="images/WhatsApp%20Image%202025-11-26%20at%207.22.39%20PM.jpg"
-           alt="NCA — community gathering" class="hero-img rounded" loading="lazy">
-      <h1 class="mt-3">Nagaram Christian Association (NCA)</h1>
+      <!-- Large hero image (keeps previous photo as background) -->
+      <img src="images/WhatsApp%20Image%202025-11-26%20at%207.22.39%20PM.jpg" alt="NCA — community gathering" class="hero-img rounded mb-3" loading="lazy">
+
+      <h1 class="mt-2">Nagaram Christian Association (NCA)</h1>
       <p class="lead">“Endeavouring to keep the unity of the Spirit in the bond of peace.” – Ephesians 4:3</p>
-      <a class="btn btn-light btn-lg" href="meetings/meeting-1.html">Read about the 1st meeting</a>
+
+      <div class="hero-box card mt-4 p-4 text-start">
+        <h3>Support NCA NGO Activities</h3>
+        <p><strong>A Call to Action for All NCA Members</strong></p>
+        <p>NCA is committed to serving and uplifting the community through impactful programs that promote education, health, environment care, and social well-being.</p>
+
+        <h5>Key Activities</h5>
+        <div class="row">
+          <div class="col-md-6">
+            <h6>📘 Education Programs</h6>
+            <ul>
+              <li>Supporting children's learning</li>
+              <li>Providing resources for rural education</li>
+            </ul>
+
+            <h6>❤️ Healthcare Initiatives</h6>
+            <ul>
+              <li>Health camps</li>
+              <li>Medical help for needy families</li>
+            </ul>
+          </div>
+
+          <div class="col-md-6">
+            <h6>🌱 Environmental Conservation</h6>
+            <ul>
+              <li>Plantation drives</li>
+              <li>Community clean-up programs</li>
+            </ul>
+
+            <h6>🤝 Community Development</h6>
+            <ul>
+              <li>Skill development</li>
+              <li>Household support programs</li>
+            </ul>
+          </div>
+        </div>
+
+        <h5 class="mt-3">How Your Sponsorship Helps</h5>
+        <p>Your contributions help NCA provide essential resources, empower families, build sustainable change, and strengthen collective unity.</p>
+
+        <h6>Sponsorship Tiers</h6>
+        <ul class="tiers">
+          <li><strong>₹100 – Basic Support</strong> — Helps fund foundational activities and community needs.</li>
+          <li><strong>₹500 – Silver Tier</strong> — Strengthens community outreach and program development.</li>
+          <li><strong>₹1000+ – Gold / Donor Tier</strong> — Supports long-term initiatives and protective services for the community.</li>
+        </ul>
+
+        <a class="btn btn-primary mt-2" href="#support">Become a Supporter</a>
+      </div>
     </div>
   </header>
 
   <main class="container my-5">
-    <!-- existing content -->
-    <section id="meeting" class="mb-5">
-      <h2>1st Meeting – Nagaram Christian Association</h2>
-      <p class="muted">Saturday, March 2nd, 2024</p>
-
+    <section id="about" class="mb-5">
+      <h2>About Nagaram Christian Association (NCA)</h2>
       <div class="card p-3">
-        <p>The Nagaram Christian Association (NCA) successfully held its first official fellowship and community meeting, bringing together believers from across Nagaram with one shared purpose: to strengthen Christian unity and build a support system for all families in the community.</p>
-        <h3 class="mt-3">Meeting Highlights</h3>
+        <p>The Nagaram Christian Association is a community-focused, faith-centered organization dedicated to fostering unity, support, and spiritual growth among believers in Nagaram. Rooted in Christian values, NCA works to ensure that every family is heard, supported, and uplifted through fellowship, prayer, and meaningful action.</p>
+
+        <h5>Our Vision</h5>
+        <p>To build a united Christian community where every member thrives in faith, safety, and dignity while contributing positively to society.</p>
+
+        <h5>Our Mission</h5>
         <ul>
-          <li>Heartfelt prayer led by Brother Das Garu.</li>
-          <li>Worship singing “Bhaktulara Smariyinchedamu” led by Brother Peter Garu.</li>
-          <li>Agenda and encouragement to participate shared by Brother Praveen Garu.</li>
-          <li>Members' thoughts and suggestions noted for future action.</li>
-          <li>Message and final prayer by Brother Charles Garu and Brother Jayaraju Garu.</li>
-          <li>Meeting concluded with tea, snacks, and fellowship.</li>
+          <li>Strengthen Christian unity</li>
+          <li>Support families in need</li>
+          <li>Provide welfare services</li>
+          <li>Expand gospel outreach</li>
+          <li>Empower youth & community leadership</li>
+          <li>Preserve sacred and community spaces</li>
+          <li>Promote education, healthcare, and environmental care</li>
         </ul>
+
+        <h5>Why NCA Exists</h5>
+        <p>We believe in standing together as one family in Christ, ensuring no believer in Nagaram faces challenges alone. Through coordinated support, prayer, and organized action, NCA serves as a platform for community empowerment and spiritual fellowship.</p>
       </div>
     </section>
 
-    <!-- other sections omitted for brevity in this snippet (keep your existing content) -->
+    <!-- Support, Media, Contact etc. (keep your existing sections as before) -->
+    <section id="support" class="mb-5">
+      <h2>Support NCA NGO Activities</h2>
+      <p>NCA is committed to serving and uplifting the community through impactful programs that promote education, health, environment care, and social well-being.</p>
+      <a class="btn btn-primary" href="#contact">Contact & Support</a>
+    </section>
+
+    <section id="contact" class="mb-5">
+      <h2>Contact & Involvement</h2>
+      <p>Email: <a href="mailto:ncanagaram@gmail.com">ncanagaram@gmail.com</a></p>
+      <p>Use the contact form on this site to reach out — or email directly for faster response.</p>
+    </section>
   </main>
 
   <footer class="bg-light py-4">
